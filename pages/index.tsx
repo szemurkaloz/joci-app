@@ -16,12 +16,15 @@ const Index = () => {
         Web Development and I have a Youtube Channel where I teach Full Stack
         Web Development
       </h6>
-      <div className='flex-grow p-4 mt-5 bg-green-400' style={{marginLeft: '-1.5rem', marginRight: '-1.5rem'}}>
+      <div className='flex-grow p-4 mt-5 bg-green-400 dark:bg-dark-100' 
+      style={{marginLeft: '-1.5rem', marginRight: '-1.5rem'}}>
         <h6 className='my-3 text-xl font-bold tracking-wider'>Amit felajánlok</h6>
         <div className='grid gap-6 lg:grid-cols-2'>
           {
             services.map(service => (
-              <div className='bg-gray-200 rounded-lg lg:col-span-1'> 
+              <div className='bg-gray-200 rounded-lg lg:col-span-1 dark:bg-dark-200'
+              key={service.title}
+              > 
                 <ServiceCard service={service}/>
               </div>
             ))
