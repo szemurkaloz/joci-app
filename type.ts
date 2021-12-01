@@ -13,59 +13,14 @@ export interface ISkill {
     name: string;
     level: string;
 }
-
-export const languages: ISkill[] = [
-    {
-      Icon: BsCircleFill,
-      name: "Python",
-      level: "45",
-    },
-    {
-      Icon: BsCircleFill,
-      name: "Java Script",
-      level: "60",
-    },
-    {
-      Icon: BsCircleFill,
-      name: "React Native",
-      level: "80",
-    },
-    {
-      Icon: BsCircleFill,
-      name: "React",
-      level: "70",
-    },
-    {
-      Icon: BsCircleFill,
-      name: "Django",
-      level: "80",
-    },
-    {
-      Icon: BsCircleFill,
-      name: "Bootstrap",
-      level: "80",
-    },
-  ];
+  export interface IProject {
+    name: string;
+    description: string;
+    image_path: string;
+    deployed_url: string;
+    github_url: string;
+    category: Category[];
+    key_techs: string[];
+  }
   
-  export const tools: ISkill[] = [
-    {
-      Icon: BsCircleFill,
-      name: "Figma",
-      level: "85",
-    },
-    {
-      Icon: BsCircleFill,
-      name: "Photoshop",
-      level: "45",
-    },
-    {
-      Icon: BsCircleFill,
-      name: "Illustrator",
-      level: "60",
-    },
-    {
-      Icon: BsCircleFill,
-      name: "Framer",
-      level: "45",
-    },
-  ];
+  export type Category = "react" | "node" | "express" | "django" | "mongo";

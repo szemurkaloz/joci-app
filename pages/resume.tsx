@@ -1,5 +1,6 @@
-import { languages, tools } from "../type"
+import { ISkill } from "../type"
 import Bar from "../components/Bar";
+import { languages, tools } from "../data";
 
 function Resume() {
     return (
@@ -22,7 +23,7 @@ function Resume() {
             <div className="">
                 <h5 className="my-2 text-xl font-bold">Software Developer Jr.</h5>
                 <p className="font-semibold">Tata Consultancy Services</p>
-                <p className="my-3">I don't know why I am doing this job</p>
+                <p className="my-3">I dont know why I am doing this job</p>
             </div>
             </div>
             </div>
@@ -31,7 +32,7 @@ function Resume() {
                 <div>
                     <h5 className='my-3 text-lg font-bold'>Nyelvek és keretrendszerek </h5>
                     <div className='my-2'>
-                        { languages.map(language =><Bar data={language} key={language.name}/>) }
+                        { languages.map((language) =><Bar data={language} key={language.name}/>) }
                     </div>
                 </div>
             </div>
@@ -40,7 +41,7 @@ function Resume() {
                 <div>
                     <h5 className='my-3 text-lg font-bold'>Eszközök és programok </h5>
                     <div className='my-2'>
-                        { tools.map(tool =><Bar data={tool} key={tool.name}/>) }
+                        { tools.map((tool) =><Bar data={tool} key={tool.name}/>) }
                     </div>
                 </div>
             </div>
