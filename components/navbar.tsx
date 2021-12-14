@@ -21,12 +21,12 @@ const NavItem: FunctionComponent<
 
 function Navbar() {
     const [activeItem, setActiveItem] = useState<string>('');
-    const {pathName} = useRouter();
+    const {asPath} = useRouter();
 
     useEffect(() => {
-        if(pathName === "/") setActiveItem("About");
-        if(pathName === "/projects") setActiveItem("Projects");
-        if(pathName === "/resume") setActiveItem("Resume");
+        if(asPath === "/") setActiveItem("About");
+        if(asPath === "/projects") setActiveItem("Projects");
+        if(asPath === "/resume") setActiveItem("Resume");
     }, [])
     return (
         <div className='flex justify-between px-5 py-3 my-3'>

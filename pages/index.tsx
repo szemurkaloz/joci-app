@@ -8,7 +8,7 @@ import { motion } from "framer-motion"
 import { fadeInUp, routeAnimation, stagger } from '../animation'
 
 const About = () => {
-
+  
   return (
     <motion.div className="flex flex-col flex-grow px-6 pt-1" variants={routeAnimation} initial="initial" animate="animate" exit="exit">
      <head>
@@ -49,28 +49,28 @@ export default About
 //? also need to change the localhost during the deployment | see the todo
 // https://aude53.medium.com/set-environment-variables-with-next-js-and-vercel-e544c0460a48
 
-export const getStaticProps = async (context: GetServerSidePropsContext) => {
+// export const getStaticProps = async (context: GetServerSidePropsContext) => {
 
-const res = await fetch('http://localhost:3000/api/services');
-const data = await res.json();
-//console.log("CLIENT", data.services)
+// const res = await fetch(`${process.env.VERCEL_URL}/api/services`);
+// const data = await res.json();
+// //console.log("CLIENT", data.services)
 
-  return {
-    props: {
-      services: data.services,
-    }
-  }
-}
+//   return {
+//     props: {
+//       services: data.services,
+//     }
+//   }
+// }
 
 //!called every time  the page refreshed
-// export const getServerSideProps: GetServerSideProps = async (
-//    context: GetServerSidePropsContext
-// ) => {
-//    const res = await fetch(`${process.env.VERCEL_URL}/api/services`)
-//    const data = await res.json()
-//    console.log(data)
-//    return { props: { services: process.env.VERCEL_UR } }
-// }
+export const getServerSideProps: GetServerSideProps = async (
+   context: GetServerSidePropsContext
+) => {
+    const res = await fetch(`${process.env.VERCEL_URL}/api/services`)
+    const data = await res.json()
+    //console.log(data)
+    return { props: { services: data.services } }
+}
 
 
 //Video : hogx kell felrakni publikálásra
