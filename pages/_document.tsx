@@ -1,4 +1,5 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Document, { Html, Main, NextScript } from 'next/document'
+import Head from 'next/head'
 
 class MyDocument extends Document {
 
@@ -8,6 +9,15 @@ class MyDocument extends Document {
         <Head > 
             <link rel="preconnect" href="https://fonts.googleapis.com"/>
             <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet"/>
+            <meta
+              name="leírás"
+              content="Hogyan lehet egy ilyen melót megvalóítani"
+            >
+            <meta
+              name="keywords"
+              content="Full Stack delveloper Freelancer"
+            >
+            </meta>
         </Head>
         <body className="bg-gradient-to-r from-green to-blue-400 dark:from-dark-500 dark:to-dark-700 dark:text-white">
           <Main />
