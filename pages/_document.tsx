@@ -1,23 +1,21 @@
-import Document, { Html, Main, NextScript } from 'next/document'
-import Head from 'next/head'
+import Document, { Html, Main, NextScript, Head} from 'next/document'
 
 class MyDocument extends Document {
 
   render() {
     return (
       <Html>
-        <Head > 
+        <Head> 
             <link rel="preconnect" href="https://fonts.googleapis.com"/>
             <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet"/>
             <meta
               name="leírás"
-              content="Hogyan lehet egy ilyen melót megvalóítani"
-            >
+              content="Hogyan lehet egy ilyen melót megvalósítani"
+            />
             <meta
               name="keywords"
               content="Full Stack delveloper Freelancer"
-            >
-            </meta>
+            />
         </Head>
         <body className="bg-gradient-to-r from-green to-blue-400 dark:from-dark-500 dark:to-dark-700 dark:text-white">
           <Main />
