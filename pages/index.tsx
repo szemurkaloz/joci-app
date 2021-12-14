@@ -2,7 +2,6 @@ import type { GetServerSideProps, GetServerSidePropsContext, NextPage } from 'ne
 import Head from 'next/head'
 import Image from 'next/image'
 import { services } from '../data'
-import styles from '../styles/Home.module.css'
 import ServiceCard from "../components/ServiceCard";
 import { motion } from "framer-motion"
 import { fadeInUp, routeAnimation, stagger } from '../animation'
@@ -13,7 +12,7 @@ const About = () => {
     <motion.div className="flex flex-col flex-grow px-6 pt-1" variants={routeAnimation} initial="initial" animate="animate" exit="exit">
      <head>
        <title>
-         QWeb delveloper | portfolio
+         Web delveloper | portfolio
        </title>
      </head>
       <h6 className="my-3 text-base font-medium">
@@ -63,14 +62,14 @@ export default About
 // }
 
 //!called every time  the page refreshed
-export const getServerSideProps: GetServerSideProps = async (
-   context: GetServerSidePropsContext
-) => {
-    const res = await fetch(`${process.env.VERCEL_URL}/api/services`)
-    const data = await res.json()
-    //console.log(data)
-    return { props: { services: data.services } }
-}
+// export const getServerSideProps: GetServerSideProps = async (
+//    context: GetServerSidePropsContext
+// ) => {
+//     const res = await fetch(`${process.env.VERCEL_URL}/api/services`)
+//     const data = await res.json()
+//     //console.log(data)
+//     return { props: { services: data.services } }
+// }
 
 
 //Video : hogx kell felrakni publikálásra
