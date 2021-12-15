@@ -2,7 +2,6 @@ import type { GetServerSideProps, GetServerSidePropsContext, NextPage } from 'ne
 import Head from 'next/head'
 import Image from 'next/image'
 import { services } from '../data'
-import styles from '../styles/Home.module.css'
 import ServiceCard from "../components/ServiceCard";
 import { motion } from "framer-motion"
 import { fadeInUp, routeAnimation, stagger } from '../animation'
@@ -13,7 +12,7 @@ const About = () => {
     <motion.div className="flex flex-col flex-grow px-6 pt-1" variants={routeAnimation} initial="initial" animate="animate" exit="exit">
      <head>
        <title>
-         QWeb delveloper | portfolio
+         Web delveloper | portfolio
        </title>
      </head>
       <h6 className="my-3 text-base font-medium">
