@@ -63,14 +63,14 @@ export default About
 // }
 
 //!called every time  the page refreshed
-export const getServerSideProps: GetServerSideProps = async (
-   context: GetServerSidePropsContext
-) => {
-    const res = await fetch(`${process.env.VERCEL_URL}/api/services`)
-    const data = await res.json()
-    //console.log(data)
-    return { props: { services: data.services } }
-}
+// export const getServerSideProps: GetServerSideProps = async (
+//    context: GetServerSidePropsContext
+// ) => {
+//     const res = await fetch(`${process.env.VERCEL_URL}/api/services`)
+//     const data = await res.json()
+//     //console.log(data)
+//     return { props: { services: data.services } }
+// }
 
 
 //Video : hogx kell felrakni publikálásra
